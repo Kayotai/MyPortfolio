@@ -1,7 +1,7 @@
 import './index.css'
 
-import ProjectCard from "../Projects/index";
-import { projects } from "../Projects/index";
+// import ProjectCard from "../Projects/index";
+// import { projects } from "../Projects/index";
 import Session from '../Session'; 
 
 export default function ProjectsSection() {

@@ -33,18 +33,6 @@ const socialLinks: ListItem[] = [
 ];
 
 
-
-const atribuicao = {
-  html: "https://www.flaticon.com/free-icons/html",
-  css: "https://www.flaticon.com/free-icons/css",
-  react: "https://www.flaticon.com/free-icons/react",
-  typescript: "https://www.flaticon.com/free-icons/typescript",
-  node: "https://www.flaticon.com/free-icons/node",
-  tailwind: "https://icons8.com/icons/set/tailwind-css",
-  mongodb: "https://www.flaticon.com/free-icons/dedicated-hosting",
-  javascript: "https://www.flaticon.com/free-icons/javascript"
-}
-
 function App() {
   return (
     <>
