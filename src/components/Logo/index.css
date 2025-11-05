@@ -1,0 +1,47 @@
+/* minimal neon logo (preto + roxo theme friendly) */
+
+.Logo-wrap {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+/* visual neon text */
+.Logo {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 0.02em;
+
+  /* cor do texto (fallback direto) */
+  color: var(--purple-500);
+
+  /* neon glow */
+  text-shadow:
+    0 0 6px rgba(124, 58, 237, 0.35),
+    0 0 12px rgba(124, 58, 237, 0.20),
+    0 6px 18px rgba(2, 2, 6, 0.6);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+   user-select: none;
+}
+
+/* sutil hover (opcional, remove se não quiser interação) */
+.Logo-wrap:hover .Logo,
+.Logo-wrap:focus-within .Logo {
+  text-shadow:
+    0 0 8px rgba(124, 58, 237, 0.45),
+    0 0 18px rgba(124, 58, 237, 0.28),
+    0 10px 24px rgba(2, 2, 6, 0.7);
+}
+
+/* respeita users que pedem menos movimento (não há animação mas é boa prática) */
+@media (prefers-reduced-motion: reduce) {
+  .Logo-wrap:hover .Logo,
+  .Logo-wrap:focus-within .Logo {
+    text-shadow:
+      0 0 6px rgba(124, 58, 237, 0.35),
+      0 0 12px rgba(124, 58, 237, 0.20),
+      0 6px 18px rgba(2, 2, 6, 0.6);
+  }
+}

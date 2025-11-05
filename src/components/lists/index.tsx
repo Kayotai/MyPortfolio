@@ -1,39 +1,48 @@
-// src/components/Lists.tsx
-// import type { ReactNode } from "react";
-// import React from "react";
+import './index.css'
+
+type Image = {
+    src: string;
+    alt: string;
+}
 
 export type ListItem = {
-  id?: string;           
+  id?: string;
+  img?: Image           
   label?: string;          
-  href?: string;          
-  description?: string;   
+  href?: string; 
+  description?: string;
+  className?: string   
   external?: boolean;     
 };
 
 type ListProps = {
   ariaLabelledBy?: string; 
   ariaLabel?: string;      
+  className?: string;
   items: ListItem[];
 };
 
-export default function Lists({ ariaLabelledBy, ariaLabel, items}: ListProps) {
+export default function Lists({ ariaLabelledBy, ariaLabel, items, className}: ListProps) {
 
   // se não tiver aria-labelledby, use aria-label 
   const ariaProps = ariaLabelledBy ? { "aria-labelledby": ariaLabelledBy } : { "aria-label": ariaLabel ?? "Lista" };
 
   return (
-    <ul {...ariaProps}>
+    <ul className= {className} {... ariaProps}>
       {items.map((item) => (
-        <li key={item.id}>
+        <li key={item.id} className= {item.className}>
+          { item.img ? (
+            <img src= {item.img.src} alt= {item.img.alt} />
+          ): false} 
           {item.href ? (
             <a href={item.href} {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
               {item.label}
             </a>
           ) : (
-            <span>{item.label}</span>
+            <span className= { item.className }>{item.label}</span>
           )}
 
-          {item.description && <p className="list-description">{item.description}</p>}
+          <p className="list-description">{item.description}</p>
         </li>
       ))}
     </ul>

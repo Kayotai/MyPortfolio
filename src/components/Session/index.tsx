@@ -1,5 +1,6 @@
 // Home.tsx
 import type { ReactNode } from "react";
+import "./index.css"
 
 type SectionProps = {
   id: string;

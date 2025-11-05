@@ -1,0 +1,120 @@
+/* src/components/header/index.css */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.4rem 1rem;
+  background: linear-gradient(90deg, rgba(12,7,17,0.6), rgba(12,7,17,0.3));
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* left block (logo) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* desktop links */
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* each item */
+.nav-links li { margin: 0; }
+
+.links {
+  color: var(--muted-text); /* corrigido var */
+  text-decoration: none;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  transition: background-color .18s ease, color .12s ease, transform .12s ease;
+  font-weight: 600;
+  transition: all .5s ease-in-out;
+}
+.links:hover,
+.links:focus {
+  color: var(--text);
+  background: rgba(124,58,237,0.08);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+/* menu-toggle button (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: var(--muted-text);
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 8px;
+}
+.menu-toggle:focus-visible {
+  box-shadow: var(--focus);
+}
+
+/* mobile layout */
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+
+  /* hide desktop nav links visually; mobile nav uses fixed panel */
+  .nav-links {
+    position: fixed;
+    top: 70px; /* your header height */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg);
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+    padding-top: 1rem;
+    transform: translateX(100%);
+    transition: transform .28s ease;
+    z-index: 999;
+  }
+
+  .nav.open .nav-links,
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1.25rem;
+    font-size: 1.15rem;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+  }
+}
+
+/* small polish */
+@media (prefers-reduced-motion: reduce) {
+  .nav-links,
+  .menu-toggle {
+    transition: none;
+  }
+}

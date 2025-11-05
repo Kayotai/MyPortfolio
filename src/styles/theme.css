@@ -1,0 +1,32 @@
+:root{
+  --neon-color: #9b5cff;        /* cor do neon */
+  --ring-thickness: 6px;       /* espessura da linha - ajuste */
+  --ring-blur: 6px;           /* rastro / blur do traço - ajuste */
+  --spin-duration: 4s;        /* velocidade da rotação */
+
+  /* palette */
+  --bg: #0b0b0f;            /* quase preto */
+  --surface: #0f0e16;       /* superfície escura */
+  --muted: #1a1822;         /* elementos secundários */
+  --purple-600: #6b21a8;    /* roxo principal (vibrante) */
+  --purple-500: #7c3aed;
+  --purple-400: #9f7aea; 
+  --accent: linear-gradient(135deg, var(--purple-600), #4c1d95);
+  --text: #ececf1;          /* texto claro */
+  --muted-text: #bfb9d6;    /* texto secundário */
+  --success: #22c55e;
+  --danger: #ef4444;
+  --glass: rgba(255,255,255, .4);
+  --focus: 0 0 0 3px rgba(124,58,237,0.22);
+  --cta-strong: #6b21a8;
+  --neon-color: #9b5cff; /* troque pela sua variável --purple-500 se quiser */
+  --neon-strong: rgba(155,92,255,0.95);
+  --neon-soft: rgba(155,92,255,0.25);
+}
+
+.eb {
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+
+}

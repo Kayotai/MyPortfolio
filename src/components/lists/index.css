@@ -1,0 +1,161 @@
+
+/* Stacks */
+
+.list-description { 
+    font-size:.9rem; 
+    color:var(--muted-text); 
+    margin: .25rem 0 0; 
+}
+
+.list-tech {
+    width: 65em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em;
+}
+
+
+.list-tech li {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   height: 17em;
+   width: 18em;
+   background-color: var(--glass);
+   padding: 1em;
+   border-radius: .5em;
+   text-align: center;
+   align-content: center;
+   align-items: center;
+   box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+}
+
+.list-tech li img {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.list-tech li p {
+    text-wrap: wrap;
+}
+
+.html-card {
+    color: red;
+}
+
+.css-card {
+    color: #5baeff;
+
+}
+
+.tw-card {
+    color: #b4f1ff;
+}
+
+.react-card {
+    color: #0099ff;
+}
+
+.js-card {
+    color: yellow;
+}
+
+.ts-card {
+    color: #b0d0ff;
+}
+
+.node-card, .db-card {
+    color: green;
+}
+
+.react-card, .html-card, .css-card, .node-card,
+.db-card, .ts-card, .tw-card, .js-card {
+    font-weight: 700;
+    text-shadow: 1 1 1 black;
+}
+
+
+/* Footer */
+.social-list {
+    display: flex;
+    justify-content: center;
+    min-height: 40px;
+    gap: 8em;
+    flex-wrap: wrap;
+}
+
+.iconSocials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconSocials a {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.iconSocials img{
+    width: 50px;
+    height: 50px;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 992px) {
+    .list-tech {
+        max-width: 40em;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .list-tech {
+        max-width: 26em;
+        padding: 0;
+    }
+
+    .list-tech li {
+        padding: 13px;
+        height: 19em;
+        width: 12em;
+    }
+
+    .social-list {
+        gap: 5em;
+    }
+}
+
+@media (max-width: 618px) {
+    .iconSocials {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+@media (max-width: 500px)  {
+   .list-tech {
+        max-width: 15em;
+        padding: 0;
+    }
+
+   .list-tech li {
+      width: 14em;
+   }
+
+   .social-list {
+       padding: 0;
+    }
+}
+
+
+@media (max-width: 280px) {
+   
+} 

@@ -1,20 +1,27 @@
+import './index.css'
+
 import ProjectCard from "../Projects/index";
+import { projects } from "../Projects/index";
+import Session from '../Session'; 
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" aria-labelledby="Lista dos meus projetos">
-        <h2 id="projects-title">Meus Projetos</h2>
-        <ul>
-            <li>
-                <ProjectCard
-                    id="proj1"
-                    title="Nome do Projeto 1"
-                    summary="Resumo curto do projeto e tecnologias usadas."
-                    href="https://exemplo.com"
-                    external
-                />
-            </li>
-        </ul>
-    </section>
+    <Session id="projects" aria-labelledby="projects-title">
+      <h2 id="tech-title">Meus Projetos</h2>
+      {/* <ul>
+        {projects.map((p) => (
+          <li key={p.id}>
+            <ProjectCard
+              id={p.id}
+              title={p.title}
+              summary={p.summary}
+              href={p.href}
+              external={p.external}
+            />
+          </li>
+        ))}
+      </ul> */}
+      <p className='eb'>Em Breve...</p>
+    </Session>
   );
 }

@@ -2,6 +2,19 @@
 import { useId } from "react";
 import type { ReactNode } from "react";
 
+
+export const projects = [
+  {
+    id: "proj1",
+    title: "Nome do Projeto 1",
+    summary: "Resumo curto do projeto e tecnologias usadas.",
+    href: "https://exemplo.com",
+    external: true,
+  },
+
+];
+
+
 type ProjectCardProps = {
   id?: string;                // opcional, usado como base para o id do título
   title: string;
