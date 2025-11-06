@@ -281,6 +281,10 @@ section {
     height: 160px;
   }
 
+  figure {
+    width: 165px;
+  }
+
   #photo-dev {
     width: 160px;
     height: 160px;
