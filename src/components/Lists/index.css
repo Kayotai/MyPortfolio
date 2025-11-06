@@ -23,7 +23,7 @@
    flex-direction: column;
    height: 17em;
    width: 18em;
-   background-color: var(--glass);
+   background-color: var(--bg);
    padding: 1em;
    border-radius: .5em;
    text-align: center;
