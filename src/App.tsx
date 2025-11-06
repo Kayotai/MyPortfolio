@@ -6,7 +6,7 @@ import { Imagens } from './styles/import'
 // Components
 import Header from './components/Header'           
 import Session from './components/Session'
-import Lists, { type ListItem } from './components/lists'
+import Lists, { type ListItem } from './components/Lists'
 // import ProjectCard from './components/ProjectCard'
 import Button from './components/ButtonDownload'
 
