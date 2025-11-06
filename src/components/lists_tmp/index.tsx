@@ -22,7 +22,7 @@ type ListProps = {
   items: ListItem[];
 };
 
-export default function Lists({ ariaLabelledBy, ariaLabel, items, className}: ListProps) {
+export default function lists({ ariaLabelledBy, ariaLabel, items, className}: ListProps) {
   const ariaProps = ariaLabelledBy ? { "aria-labelledby": ariaLabelledBy } : { "aria-label": ariaLabel ?? "Lista" };
 
   return (
