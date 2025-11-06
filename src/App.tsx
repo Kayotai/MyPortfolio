@@ -7,7 +7,7 @@ import { Imagens } from './styles/import'
 import Header from './components/Header'           
 import Session from './components/Session'
 import Lists from './components/Lists'
-import { type ListItem } from './components/Lists'
+import { type ListItem } from './components/ListasDasListas'
 // import ProjectCard from './components/ProjectCard'
 import Button from './components/ButtonDownload'
 
