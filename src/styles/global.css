@@ -272,14 +272,11 @@ section {
     gap: 0;
   }
 
-  figure {
-    height: 200px;
+  #home-title {
+    margin-top: 5px;
   }
+  
 
-  .home-img .img-box {
-    width: 160px;
-    height: 160px;
-  }
 
   figure {
     width: 165px;
