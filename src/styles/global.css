@@ -172,11 +172,12 @@ section {
 #social {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 18px;
   text-align: center;
   background-color: var(--bg);
   padding: 20px 20px;
-  min-height: 200px;
+  min-height: 400px;
 }
 
 #contact-title {
@@ -247,9 +248,12 @@ section {
     flex-direction: column;
   }
 
-  .home-img .img-box {
-    width: 200px;
-    height: 200px;
+  #home-title {
+    margin-top: 1.3em;
+  }
+
+  figure {
+    height: 205px;
   }
 
   #photo-dev {
@@ -273,10 +277,8 @@ section {
   }
 
   #home-title {
-    margin-top: 5px;
+    margin-top: 1em;
   }
-  
-
 
   figure {
     width: 165px;
